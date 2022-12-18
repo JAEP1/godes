@@ -1,0 +1,54 @@
+{% extends 'RentCar/base.html' %}
+{% block contenido %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'RentCar/css/pagina_formulario/formpag.css' %}">
+
+<!--=========================================-->
+<!--DATOS A SOLICITAR-->
+<!--=========================================-->
+{% if  user.is_authenticated %}
+<form action="" method="POST" id="form" class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+      <fieldset disabled>
+        <legend style="font-size: 30px;">Perfil del <span style="color:rgb(255, 174, 0) ;">Usuario</span></legend>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Rut</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ user.username }}">
+        </div>
+        <div class="mb-3">
+          <label for="disabledTextInput" class="form-label">Correo Electronico</label>
+          <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ user.email }}">
+        </div>
+    
+      <div class="form">
+
+        <div class="mb-3">
+          <label for="disabledTextInput">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="{{user.first_name}}" required><span
+            class="barra"></span>
+
+        </div>
+        <div class="mb-3">
+          <label for="disabledTextInput">Apellido</label>
+          <input type="text" name="apellido_p" id="apellido_p" class="form-control" placeholder="{{user.last_name}}" required><span
+            class="barra"></span>
+
+        </div>
+      </fieldset>
+  
+        <center><a href="{% url 'mod_perfil' user.username %}" class="btn" style="background-color: rgb(255, 174, 0);">MODIFICAR</a></center>
+        <p class="warnings" id="warnings"></p>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+</form>
+{% endif %}
+<script src="Validaciones/valdiacion_auto.js"></script>
+
+
+
+{% endblock %}

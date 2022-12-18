@@ -1,0 +1,68 @@
+{% extends 'RentCar/base.html' %}
+{% block contenido %}
+{% load static %}
+   
+<section class="w-50 mx-auto text-center pt-5" id="intro" >
+  <div id="google_translate_element"></div>
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+</script>
+<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <h1 class="p-3 fs-2 border-top border-3 pt-5">Mas sobre nuestra <span style="color: rgb(255, 174, 0);">COMUNIDAD.</span> </h1>
+  <p class="p-3 fs-4">Creemos que hemos creado una solución para que la gente se pueda movilizar en vehiculo sin necesidad de tener que comprarlo. Somos un lugar sumamente confiable, 
+    comprometidos con los clientes, ofrecemos un servicio de calidad, por lo que contamos con seguros de emergencias
+    y por sobre todo nos preocupamos de que nuestros clientes se queden con las ganas de más y se vayan con una buena experiencia
+    y con un servicio de <span style="color:rgb(255, 174, 0) ;"> CALIDAD.</span></p>
+</section>
+
+<section class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-12 col-sm-12  my-5 d-flex justify-content-center" ></div>
+    <div class="col-lg-6 col-md-12 col-sm-12  my-5 d-flex justify-content-center mapacito" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13329.84839562063!2d-70.68075473022465!3d-33.358999999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c77a188b2e3b%3A0xa597d82084a9f41d!2sAwto!5e0!3m2!1ses-419!2scl!4v1651538873769!5m2!1ses-419!2scl" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div class="col-lg-3 col-md-12 col-sm-12  my-5 d-flex justify-content-center" ></div>
+  </div>
+
+
+
+
+
+  <section class="w-50 mx-auto text-center pt-5" id="intro" >
+    <h1 class="p-3 fs-2 border-top border-3 pt-5" style="color: rgb(255, 174, 0);">Terminos y condiciones  </h1>
+    <p class="p-3 fs-4">Nuestros terminos y condiciones de nuestros contratos son arrendar el auto minimo un día, la entrega y devolucion del auto
+      son entre las horas  <span style="color: rgb(255, 174, 0);">7:20</span> am y las <span style="color: rgb(255, 174, 0);">12:00</span> am, al llegar se debe firmar el documento correspondiente en el cual se le presentara antes de la entrega del auto
+    </p>
+  </section>
+  
+  <div class="row w-100 mx-auto servicio-fila"  >
+      <div class="col-lg-6 col-md-12 col-sm-12  my-5 d-flex justify-content-start icono-wrap ">
+          <img src="{% static 'RentCar/img/imagenes_info/logito.png' %}" alt="car"  width="180" height="180">
+      
+          <div>
+              <h3 class="fs-5 mt-4 px-4 pb-1">CONOCE MÁS O CONTACTANOS</h3>
+              <p class="px-4"> Ve a nuestros catalogos y elije lo mejor del año, con un 
+                servicio de excelente calidad.
+              </p>
+              <p class="px-4"> <h6>godes.rentacar@rent.com.</h6></P>
+          </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 my-5 d-flex justify-content-start icono-wrap">
+          <img src="{% static 'RentCar/img/imagenes_info/maps.jpg' %}" alt="location"  width="180" height="180">
+      
+      <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">UBICACIÓN</h3>
+          <p class="px-4">Nos ubicamos en Av. Sta. Marta de Huechuraba 7300, Huechuraba, Región Metropolitana
+            ¡TE ESPERAMOS! , ven y aclaramos todas tus dudas.
+          </p>
+      </div>
+      </div>
+
+  </div>
+</section>
+
+
+  {% endblock %}
